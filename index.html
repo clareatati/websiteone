@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#home" onclick="loadPage('home')">Home</a></li>
+            <li><a href="#about" onclick="loadPage('about')">About Me</a></li>
+        </ul>
+    </nav> 
+    <div id="content"></div>
+</body>
+</html>
+
+
+<section id="home">
+    <h1>My Project</h1>
+    <div>
+        <label for="filter">Filter Projects:</label>
+        <input type="text" id="filter" placeholder="Type to filter projects">
+    </div>
+    <div id="project-tabs">
+        <button class="tab-button" onclick="showTab('all')">All</button>
+        <button class="tab-button" onclick="showTab('web')">Web Development</button>
+        <button class="tab-button" onclick="showTab('data')">Data Science</button>
+        <button class="tab-button" onclick="showTab('mobile')">Mobile Apps</button>
+    </div>
+    <div id="project-list">
+        <div class="project" data-category="web">
+            <h2>Book Recommendation Web Application</h2>
+            <p>This web application recommends books to users based on their preferences and reading history. Users can create profiles where they input their favorite genres, authors, and books they've enjoyed in the past. The system uses this information to suggest new books that match their tastes. Key features include:</p>
+            <ul>
+                <li>User authentication</li>
+                <li>A dashboard to manage profiles and preferences</li>
+                <li>A recommendation engine utilizing algorithms like collaborative filtering or content-based filtering</li>
+                <li>Book summaries, ratings, and links to purchase or borrow books from online platforms</li>
+            </ul>
+            <a href="#">Read more</a>
+        </div>
+        <!-- Add more projects as needed -->
+    </div>
+</section>
+
+
+
+<section id="about">
+    <h1>About Me</h1>
+    <p>Hello! My name is Atati Clare.</p>
+    <p>I am a 5th-year student at JKUAT studying GEGIS. My hobbies include reading, cooking, and hiking.</p>
+    
+    <h2>Contact Me</h2>
+    <form id="contact-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+        
+        <button type="submit">Send</button>
+    </form>
+</section>
